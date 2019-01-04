@@ -1,6 +1,7 @@
 from Tkinter import *
+from touchscreen import TouchScreen
 
-import tkfont
+import tkFont
 import sys
 
 
@@ -19,6 +20,7 @@ class BiabApp(object):
         b['font'] = helv36
         b.grid(row=0, column=0)
         if enable_ts:
+            print("Enabling TouchScreen Support")
             self.ts = TouchScreen(master)
 
 

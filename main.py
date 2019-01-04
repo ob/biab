@@ -1,5 +1,4 @@
 from Tkinter import *
-from touchscreen import TouchScreen
 from biab import BiabApp
 
 import argparse
