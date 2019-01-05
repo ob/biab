@@ -6,6 +6,8 @@ import sys
 
 
 class BiabApp(object):
+    ts = None
+
     def __init__(self, master, **kwargs):
         enable_ts = kwargs.get('touchscreen', False)
         self.master=master
@@ -33,6 +35,7 @@ class BiabApp(object):
 
     def quit(self):
         print("Exiting application")
-        self.ts.quit()
+	if self.ts:
+            self.ts.quit()
         self.master.quit()
         sys.exit(0)
